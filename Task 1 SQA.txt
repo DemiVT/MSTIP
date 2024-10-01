@@ -1,0 +1,41 @@
+Task 1: Building a TCP and Executing Manual Testing
+Objective: To create a test plan, identify testing features, and execute manual tests.
+
+Step 1: Create a Test Plan
+A Test Plan is a comprehensive document outlining the testing strategy. The following points should be addressed:
+
+Scope: Define the features to be tested such as user registration, login, form submissions, navigation, and error handling.
+Testing Approach:
+Test Types: Functional testing, UI testing, and usability testing.
+Manual Testing: Tests to be executed manually on various browsers and devices.
+Resources: Assign test cases to testers.
+Schedule: Define timelines for different phases of testing.
+Exit Criteria: When all critical bugs are fixed and major functionalities work as expected.
+Step 2: Identify Features and Test Scenarios
+Identify core features to test, such as:
+
+User Registration: Test form validation, error messages, and data submission.
+Login: Ensure the system correctly handles login requests, invalid credentials, and account locking.
+Form Submissions: Test form completion with valid and invalid inputs.
+Navigation: Verify navigation between different pages of the website.
+Error Handling: Ensure proper error messages are shown for incorrect input or system failures.
+Step 3: Define Test Types
+Functional Testing: Testing whether the functionality works as expected.
+UI Testing: Ensure the UI matches the design and works across browsers.
+Usability Testing: Test if the site is user-friendly.
+Step 4: Execute Manual Tests
+Write manual test cases for each feature and run them manually on different devices and browsers.
+
+Test Case Example (Login):
+Test Case	Expected Result	Actual Result	Pass/Fail
+Login with valid input	Redirect to dashboard	Redirect to dashboard	Pass
+Login with invalid input	Show error message	Show error message	Pass
+Blank login fields	Show validation message	Show validation message	Pass
+Task 2: Automation Testing using Selenium or Cypress
+Objective: Set up an automated testing environment and run test scripts.
+
+Step 1: Set up Selenium or Cypress
+For Selenium (Using Java):
+Install Selenium WebDriver: Download and set up Selenium in your preferred language (e.g., Java, Python, or JavaScript).
+Install Testing Framework: Use TestNG for Java to manage test execution.
+Install Browser Drivers: Download ChromeDriver or other browser drivers.

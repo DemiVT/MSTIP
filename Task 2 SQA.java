@@ -20,15 +20,15 @@ public class MindShift_Internship {
     @BeforeClass
     public void setUp() {
         // Set up ChromeDriver path
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");  // Replace with your ChromeDriver path
+        System.setProperty("webdriver.chrome.driver", "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\chromedriver.exe");  
         driver = new ChromeDriver();
-        driver.get("https://example.com/login");  // Replace with the actual URL
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");  
     }
 
     @DataProvider(name = "loginData")
     public Object[][] loginDataProvider() throws IOException {
         // Load data from CSV file
-        CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(new FileReader("path/to/testdata.csv")); // Update the path to your CSV file
+        CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(new FileReader("Desktop\\testdata.csv")); 
         Object[][] data = new Object[parser.getRecords().size()][2];
         int index = 0;
         for (CSVRecord record : parser) {
@@ -42,14 +42,14 @@ public class MindShift_Internship {
     @Test(dataProvider = "loginData")
     public void loginTest(String username, String password) {
         // Locate username field and input value
-        driver.findElement(By.xpath("//input[@id='username']")).sendKeys(username);
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys(Admin);
         // Locate password field and input value
-        driver.findElement(By.cssSelector("#password")).sendKeys(password);
+        driver.findElement(By.cssSelector("#password")).sendKeys(admin123);
         // Click the login button
         driver.findElement(By.id("loginBtn")).click();
 
         // Verification (Modify as per actual behavior)
-        String expectedUrl = "https://example.com/dashboard";  // Adjust this according to the actual URL
+        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";  
         String actualUrl = driver.getCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl, "Login Test Failed: User not redirected to dashboard.");
         
